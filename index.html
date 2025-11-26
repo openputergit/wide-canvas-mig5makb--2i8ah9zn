@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Mukherjee | Mechanical Engineer & Project Management</title>
+
+    <!-- Tailwind + Icons + Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        engineer: {
+                            light: '#f7fafc',
+                            DEFAULT: '#1e293b',
+                            dark: '#0f172a',
+                            accent: '#334155',
+                            accentDark: '#1e40af',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e40af;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-engineer-light text-engineer-dark font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-mono font-bold text-xl text-engineer-accent tracking-tighter">
+                        <i class="bi bi-gear-wide-connected mr-2"></i>AM<span class="text-slate-400">.eng</span>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-engineer-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-engineer-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Profile</a>
+                        <a href="#cv" class="hover:text-engineer-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Timeline</a>
+                        <a href="#quirks" class="hover:text-engineer-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Specs</a>
+                        <a href="#contact" class="bg-engineer-accent text-white hover:bg-engineer-accentDark px-4 py-2 rounded border border-transparent shadow-sm text-sm font-medium transition-all">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-engineer-dark hover:text-engineer-accent focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden border-b border-slate-200 bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="toggleMobileMenu()" class="text-engineer-dark hover:text-engineer-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-engineer-dark hover:text-engineer-accent block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+                <a href="#cv" onclick="toggleMobileMenu()" class="text-engineer-dark hover:text-engineer-accent block px-3 py-2 rounded-md text-base font-medium">Timeline</a>
+                <a href="#quirks" onclick="toggleMobileMenu()" class="text-engineer-dark hover:text-engineer-accent block px-3 py-2 rounded-md text-base font-medium">Specs</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-engineer-accent font-bold block px-3 py-2 rounded-md text-base">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 relative border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl tracking-tight font-extrabold text-engineer-dark mb-6">
+                <span class="block">Mechanical Engineering.</span>
+                <span class="block text-engineer-accent font-mono font-light text-3xl sm:text-4xl lg:text-5xl mt-2">
+                    Master’s in Project Management.
+                </span>
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-slate-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl lg:mx-0 font-light">
+                Passionate about energy transition and complex engineering projects that balance technical integrity, compliance, and delivery.
+            </p>
+        </div>
+    </section>
+
+    <!-- About / Profile Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-engineer-accent font-semibold tracking-wide uppercase font-mono">// Profile</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-engineer-dark sm:text-4xl">
+                    Mechanical Core. Project Mindset.
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-slate-500 lg:mx-auto">
+                    Mechanical engineering training combined with project management experience, focused on delivering structured, evidence-based outcomes.
+                </p>
+            </div>
+            <div class="mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 shadow-sm relative overflow-hidden">
+                        <p class="text-slate-700 mb-4 leading-relaxed">
+                            Currently pursuing a <span class="font-semibold text-engineer-dark">Master’s in Project Management</span> while leveraging a background in Mechanical Engineering.
+                        </p>
+                        <p class="text-slate-700 mb-4 leading-relaxed">
+                            Passionate about sustainable engineering projects focused on energy transition and decarbonisation.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 border-l-4 border-engineer-accent bg-white shadow-sm rounded-r hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-engineer-dark">Skills</h3>
+                            <p class="text-sm text-slate-500 mt-1">CAD Design, Programming, Project Management</p>
+                        </div>
+                        <div class="p-4 border-l-4 border-slate-400 bg-white shadow-sm rounded-r hover:shadow-md transition-shadow">
+                            <h3 class="font-bold text-engineer-dark">Interests</h3>
+                            <p class="text-sm text-slate-500 mt-1">Energy Transition, Engineering Consulting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline / CV Section -->
+    <section id="cv" class="py-20 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <h2 class="text-3xl font-bold text-engineer-dark mb-12 text-center font-mono">
+                <span class="text-engineer-accent">#</span> Career Timeline
+            </h2>
+            <!-- Timeline content goes here -->
+            <div class="text-center mt-10">
+                <a href="AyushM_CV.pdf" class="inline-flex items-center px-6 py-3 border border-slate-300 shadow-sm text-sm font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-engineer-accent transition-colors">
+                    <i class="bi bi-file-earmark-pdf mr-2"></i> Download Full CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-engineer-dark">Establish Connection</h2>
+                <p class="mt-4 text-lg text-slate-500">
+                    Open to opportunities in project management and engineering roles.
+                </p>
+            </div>
+            <div class="bg-slate-50 shadow rounded-lg p-8 border border-slate-200">
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message simulation: Sent successfully.');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700">Name / Organization</label>
+                            <input type="text" name="name" id="name" class="mt-1 focus:ring-engineer-accent focus:border-engineer-accent block w-full shadow-sm sm:text-sm border-slate-300 rounded-md p-3 border" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700">Email Address</label>
+                            <input type="email" name="email" id="email" class="mt-1 focus:ring-engineer-accent focus:border-engineer-accent block w-full shadow-sm sm:text-sm border-slate-300 rounded-md p-3 border" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 focus:ring-engineer-accent focus:border-engineer-accent block w-full shadow-sm sm:text-sm border-slate-300 rounded-md p-3 border" placeholder="Details of inquiry..."></textarea>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-engineer-accent hover:bg-engineer-accentDark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-engineer-accent transition-transform transform hover:scale-105">
+                            Send Message <i class="bi bi-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-engineer-dark text-slate-400 py-12 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="font-mono font-bold text-xl text-white block">AM.eng</span>
+                <span class="text-xs">© 2025 Ayush Mukherjee. Mechanical Engineer &amp; Project Management.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
